@@ -161,7 +161,7 @@ bar {
         urgent_workspace   #aa0000 #990000    #ffffff
     }
     # i3bar position
-    position top
+    position bottom
     # Using custom i3status.conf
     status_command i3status -c ~/.i3/i3status.conf
 }
@@ -170,3 +170,8 @@ bar {
 exec --no-startup-id nm-applet
 exec --no-startup-id owncloud
 exec --no-startup-id dropbox start
+
+# LeCoVi shortcuts
+bindsym Ctrl+Mod1+w exec firefox
+bindsym Ctrl+Mod1+e exec spacefm
+
