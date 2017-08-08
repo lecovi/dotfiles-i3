@@ -10,12 +10,34 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+# Terminator: Unicode f120
+set $ws1 workspace "1 "
+# Firefox:    Unicode f269
+set $ws2 workspace "2 "
+# Rambox:     Unicode f1d8
+set $ws3 workspace "3 "
+# Nemo:       Unicode f07c
+set $ws4 workspace "4 "
+# KeeWeb:     Unicode f084
+set $ws5 workspace "5 "
+ # PyCharm:    Unicode f296
+set $ws6 workspace "6 "
+# VS Code:    Unicode f121
+set $ws7 workspace "7  "
+# General:    Unicode f26c
+set $ws8 workspace "8 "
+# General:    Unicode f26c
+set $ws9 workspace "9 "
+# Chrome:     Unicode f268
+set $ws0 workspace "10 "
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono,FontAwesome 11
+#font pango:DejaVu Sans Mono,FontAwesome 11
+font pango:Monospace,FontAwesome 11
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -109,35 +131,28 @@ bindsym $mod+Mod1+Down move workspace to output down
 bindsym $mod+Mod1+Up move workspace to output up
 
 # switch to workspace
-# 1: Terminator Unicode:  f120
-# 2: Firefox    Unicode:  f269
-# 3: Rambox     Unicode:  f1d8
-# 4: Nemo       Unicode:  f07c
-# 5: KeeWeb     Unicode:  f084
-# 6: PyCharm    Unicode:  f296
-# 0: Chrome     Unicode:  f268
-bindsym $mod+1 workspace 1 
-bindsym $mod+2 workspace 2 
-bindsym $mod+3 workspace 3 
-bindsym $mod+4 workspace 4 
-bindsym $mod+5 workspace 5 
-bindsym $mod+6 workspace 6 
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10 
+bindsym $mod+1 $ws1
+bindsym $mod+2 $ws2
+bindsym $mod+3 $ws3
+bindsym $mod+4 $ws4
+bindsym $mod+5 $ws5
+bindsym $mod+6 $ws6
+bindsym $mod+7 $ws7
+bindsym $mod+8 $ws8
+bindsym $mod+9 $ws9
+bindsym $mod+0 $ws0
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 
-bindsym $mod+Shift+2 move container to workspace 2 
-bindsym $mod+Shift+3 move container to workspace 3 
-bindsym $mod+Shift+4 move container to workspace 4 
-bindsym $mod+Shift+5 move container to workspace 5 
-bindsym $mod+Shift+6 move container to workspace 6 
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10 
+bindsym $mod+Shift+1 move container to $ws1
+bindsym $mod+Shift+2 move container to $ws2
+bindsym $mod+Shift+3 move container to $ws3
+bindsym $mod+Shift+4 move container to $ws4
+bindsym $mod+Shift+5 move container to $ws5
+bindsym $mod+Shift+6 move container to $ws6
+bindsym $mod+Shift+7 move container to $ws7
+bindsym $mod+Shift+8 move container to $ws8
+bindsym $mod+Shift+9 move container to $ws9
+bindsym $mod+Shift+0 move container to $ws0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -206,9 +221,9 @@ exec --no-startup-id "feh --bg-center /home/leo/Imágenes/flia.jpg"
 # Configuring Elan Touchpad with 'xinput'
 # more info with 'xinput list-props "Elan Touchpad"
 # Natural Scrolling Enabled
-exec --no-startup-id "xinput set-prop 11 287 1"
+exec_always --no-startup-id "xinput set-prop 11 286 1"
 # Tapping Enabled
-exec --no-startup-id "xinput set-prop 11 277 1"
+exec_always --no-startup-id "xinput set-prop 11 276 1"
 exec terminator
 exec firefox
 exec /home/leo/Descargas/Rambox
@@ -217,12 +232,12 @@ exec xautolock -time 15 -locker '~/.i3/screen_locker.sh' &
 # LeCoVi's shortcuts
 bindsym Ctrl+Mod1+w exec firefox
 bindsym Ctrl+Mod1+e exec nemo
-bindsym Ctrl+Mod1+k exec /home/leo/Descargas/KeeWeb
-bindsym Ctrl+Mod1+m exec /home/leo/Descargas/Rambox
+bindsym Ctrl+Mod1+k exec ~/Descargas/KeeWeb
+bindsym Ctrl+Mod1+m exec ~/Descargas/Rambox
 bindsym Ctrl+Mod1+Shift+k exec keepass
 bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+y exec "${HOME}/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/171.4694.67/bin/pycharm.sh"
-bindsym Ctrl+Mod1+l exec i3lock
+bindsym Ctrl+Mod1+l exec '~/.i3/screen_locker.sh'
 # Screenshot with ImageMagick whole window
 bindsym Print exec "import -window root ~/Imágenes/Screenshot-$(date +%Y%m%d%H%M%S).png"
 # Screenshot with ImageMagick focused window
@@ -233,10 +248,11 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # LeCoVi's assigns
-assign [class="^Terminator$"] 1 
-assign [class="^Firefox$"] 2 
-assign [class="^Rambox$"] 3 
-assign [class="^Nemo$"] 4 
-assign [class="^KeeWeb$"] 5 
-assign [class="^jetbrains-pycharm$"] 6 
-assign [class="^Google-chrome$"] 0 
+assign [class="^Terminator$"] $ws1
+assign [class="^Firefox$"] $ws2
+assign [class="^Rambox$"] $ws3
+assign [class="^Nemo$"] $ws4
+assign [class="^KeeWeb$"] $ws5
+assign [class="^jetbrains-pycharm$"] $ws6
+assign [class="^Code$"] $ws7
+assign [class="^Google-chrome$"] $ws0
