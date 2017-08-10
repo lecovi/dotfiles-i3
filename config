@@ -266,7 +266,7 @@ bindsym Ctrl+Mod1+k exec KeeWeb
 bindsym Ctrl+Mod1+m exec /home/leo/Descargas/Rambox-0.5.10-x64.AppImage
 bindsym Ctrl+Mod1+Shift+k exec keepass
 bindsym Ctrl+Mod1+g exec google-chrome-stable
-bindsym Ctrl+Mod1+y exec "${HOME}/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/171.4694.67/bin/pycharm.sh"
+bindsym Ctrl+Mod1+y exec "${HOME}/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/171.3780.115/bin/pycharm.sh"
 bindsym Ctrl+Mod1+l exec "~/.i3/screen_locker.sh"
 # Screenshot with ImageMagick whole window
 bindsym Print exec "import -window root ~/Imágenes/Screenshot-$(date +%Y%m%d%H%M%S).png"
