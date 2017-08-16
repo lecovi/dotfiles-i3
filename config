@@ -239,6 +239,8 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym Mod1+Tab workspace back_and_forth
 
 # Startup programs
+#exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/cinnamon-settings-daemon/csd-xsettings
 exec --no-startup-id "xrandr --auto --output VGA1 --mode 1920x1080 --right-of HDMI1"
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -10 nextcloud
@@ -263,8 +265,8 @@ exec xautolock -time 15 -locker '~/.i3/screen_locker.sh' &
 bindsym Ctrl+Mod1+w exec firefox
 bindsym Ctrl+Mod1+e exec nemo
 bindsym Ctrl+Mod1+k exec KeeWeb
+bindsym Ctrl+Shift+Mod1+k exec keepass2
 bindsym Ctrl+Mod1+m exec /home/leo/Descargas/Rambox-0.5.10-x64.AppImage
-bindsym Ctrl+Mod1+Shift+k exec keepass
 bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+y exec "${HOME}/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/171.3780.115/bin/pycharm.sh"
 bindsym Ctrl+Mod1+l exec "~/.i3/screen_locker.sh"
