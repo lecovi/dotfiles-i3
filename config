@@ -17,8 +17,8 @@ set $ws4 workspace "4 "
 set $ws5 workspace "5 "
 set $ws6 workspace "6 "
 set $ws7 workspace "7 "
-set $ws8 workspace "8"
-set $ws9 workspace "9"
+set $ws8 workspace "8 "
+set $ws9 workspace "9 "
 set $ws0 workspace "10 "
 
 # Screen layout
@@ -259,7 +259,7 @@ exec --no-startup-id i3-msg '$ws1; exec terminator'
 exec --no-startup-id i3-msg '$ws7; exec terminator'
 exec --no-startup-id numlockx on
 exec firefox
-exec /home/leo/Descargas/Rambox-0.5.10-x64.AppImage
+exec /home/leo/Descargas/Rambox-0.5.12-x64.AppImage
 exec KeeWeb
 exec xautolock -time 15 -locker '~/.i3/screen_locker.sh' &
 
