@@ -211,6 +211,7 @@ bar {
 
 bar {
     output HDMI1
+    tray_output primary
     colors {
         # Whole color settings
         background #000000
@@ -225,7 +226,7 @@ bar {
     # i3bar position
     position bottom
     # Using custom i3status.conf
-    status_command i3status -c ~/.i3/i3status.conf
+    #status_command i3status -c ~/.i3/i3status.conf
 }
 # LeCoVi's Alt Tab behavior
 bindsym $mod+Tab workspace next
