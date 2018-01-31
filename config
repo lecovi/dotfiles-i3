@@ -252,9 +252,12 @@ exec --no-startup-id "feh --bg-center /home/leo/Imágenes/flia.jpg"
 #exec_always --no-startup-id "xinput set-prop 11 286 1"
 # Tapping Enabled
 #exec_always --no-startup-id "xinput set-prop 11 276 1"
+exec "setxkbmap -model pc105 -layout us -variant alt-intl"
 exec terminator
 exec firefox
 exec /home/leo/Descargas/Rambox
+exec nemo
+exec /home/leo/Descargas/KeeWeb
 exec xautolock -time 15 -locker '~/.i3/screen_locker.sh' &
 
 # LeCoVi's shortcuts
