@@ -269,7 +269,7 @@ bindsym Ctrl+Shift+Mod1+k exec keepass2
 bindsym Ctrl+Mod1+m exec /home/leo/Descargas/Rambox
 #bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+g exec chromium-browser
-bindsym Ctrl+Mod1+y exec "${HOME}/.local/share/JetBrains/Toolbox/apps/PyCharm-P/ch-0/171.3780.115/bin/pycharm.sh"
+bindsym Ctrl+Mod1+y exec "/usr/local/bin/charm"
 #bindsym Ctrl+Mod1+l exec "~/.i3/screen_locker.sh"
 bindsym Ctrl+Mod1+l exec cinnamon-screensaver-command -a
 # Screenshot with ImageMagick whole window
