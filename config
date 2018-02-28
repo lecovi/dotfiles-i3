@@ -254,7 +254,7 @@ exec --no-startup-id "feh --bg-center /home/leo/Imágenes/flia.jpg"
 exec "setxkbmap -model pc105 -layout us -variant alt-intl"
 exec terminator
 exec firefox
-exec /home/leo/Descargas/Rambox
+exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.i3/ws3.json; exec chromium-browser; exec /home/leo/Dropbox/Software/Telegram/Telegram -- %u; exec hexchat'"
 exec nemo
 exec /home/leo/Descargas/KeeWeb
 exec xautolock -time 15 -locker '~/.i3/screen_locker.sh' &
