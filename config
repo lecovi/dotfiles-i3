@@ -251,7 +251,8 @@ exec --no-startup-id "feh --bg-center /home/leo/Imágenes/flia.jpg"
 #exec_always --no-startup-id "xinput set-prop 11 286 1"
 # Tapping Enabled
 #exec_always --no-startup-id "xinput set-prop 11 276 1"
-exec "setxkbmap -model pc105 -layout us -variant alt-intl"
+#exec "setxkbmap -model pc105 -layout us -variant alt-intl"
+exec "setxkbmap -model pc104 -layout us -variant intl"
 exec terminator
 exec firefox
 exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.i3/ws3.json; exec chromium-browser; exec /home/leo/Dropbox/Software/Telegram/Telegram -- %u; exec hexchat'"
