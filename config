@@ -289,8 +289,11 @@ bindsym $mod+Print exec gnome-screenshot --window
 bindsym Shift+$mod+Print exec gnome-screenshot --area
 
 # Brightness Control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+# Copy backlight to /etc/sudoers.d/backlight
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessUp exec bash -c 'sudo tee /sys/class/backlight/intel_backlight/brightness <<<$(( $(cat /sys/class/backlight/intel_backlight/brightness) + 15 ))'
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessDown exec bash -c 'sudo tee /sys/class/backlight/intel_backlight/brightness <<<$(( $(cat /sys/class/backlight/intel_backlight/brightness) - 15 ))'
 
 # LeCoVi's assigns
 assign [class="^Terminator$"] $ws1
