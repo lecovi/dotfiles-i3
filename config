@@ -67,7 +67,8 @@ bindsym Mod1+F4 kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi drun,ssh,run -show combi -modi combi"
 
 # Key Volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
