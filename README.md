@@ -3,7 +3,7 @@ Personal i3 Window Manager Configuration
 
 ## Install rofi
 
-Rofi is a replace for dmenu
+[Rofi](https://github.com/DaveDavenport/rofi) is a replace for dmenu
 
 ```bash
 sudo dnf install rofi
