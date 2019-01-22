@@ -55,8 +55,10 @@ new_window none
 workspace_layout tabbed
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec terminator
+#bindsym $mod+meturn exec i3-sensible-terminal
+#bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec terminator
+bindsym $mod+Return exec urxvt256c-ml
 
 # kill focused window
 #bindsym $mod+Shift+q kill
@@ -258,7 +260,8 @@ exec --no-startup-id "feh --bg-center /home/leo/Imágenes/flia.jpg"
 #exec_always --no-startup-id "xinput set-prop 11 276 1"
 #exec "setxkbmap -model pc105 -layout us -variant alt-intl"
 exec "setxkbmap -model pc104 -layout us -variant intl"
-exec terminator
+#exec terminator
+exec urxvt256c-ml
 exec firefox
 exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.config/i3/ws3.json; exec chromium-browser; exec /home/leo/Descargas/Telegram/Telegram -- %u; exec hexchat'"
 exec nemo
@@ -273,7 +276,7 @@ bindsym Ctrl+Mod1+m exec ~/Descargas/Rambox
 bindsym Ctrl+Mod1+Shift+k exec keepass
 bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+y exec "/usr/local/bin/charm_pro"
-bindsym $mod+Shift+Return exec gnome-terminal
+#bindsym $mod+Shift+Return exec gnome-terminal
 
 # Screensaver
 #bindsym Ctrl+Mod1+l exec '~/.i3/screen_locker.sh'
@@ -297,7 +300,8 @@ bindsym XF86MonBrightnessUp exec bash -c 'sudo tee /sys/class/backlight/intel_ba
 bindsym XF86MonBrightnessDown exec bash -c 'sudo tee /sys/class/backlight/intel_backlight/brightness <<<$(( $(cat /sys/class/backlight/intel_backlight/brightness) - 15 ))'
 
 # LeCoVi's assigns
-assign [class="^Terminator$"] $ws1
+#assign [class="^Terminator$"] $ws1
+assign [class="^URxvt$"] $ws1
 assign [class="^Firefox$"] $ws2
 assign [class="^Rambox$"] $ws3
 assign [class="^Nemo$"] $ws4
