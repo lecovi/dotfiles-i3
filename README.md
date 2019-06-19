@@ -6,7 +6,7 @@ Personal i3 Window Manager Configuration
 [Rofi](https://github.com/DaveDavenport/rofi) is a replace for dmenu
 
 ```bash
-sudo dnf install rofi
+sudo dnf install rofi flameshot
 ```
 
 ## Installing Font-Awesome 4.4.0

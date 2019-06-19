@@ -292,7 +292,8 @@ bindsym $mod+Print exec gnome-screenshot --window
 # Screenshot with Scrot area selected
 #bindsym Shift+Mod1+Print exec "scrot -s 'screenshot-%Y%m%d_%H%M%S.png' -e 'mv $f ~/Imágenes/"
 #bindsym Shift+$mod+Print exec gnome-screenshot --area
-bindsym Ctrl+Print exec gnome-screenshot --area
+#bindsym Ctrl+Print exec gnome-screenshot --area
+bindsym Ctrl+Print exec flameshot gui 
 
 # Brightness Control
 # Copy backlight to /etc/sudoers.d/backlight
