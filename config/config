@@ -264,7 +264,7 @@ exec --no-startup-id ~/.config/i3/touchpad.sh
 
 exec "setxkbmap -model pc104 -layout us -variant intl"
 exec firefox
-exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.config/i3/ws3.json; exec chromium-browser; exec /home/leo/Descargas/Telegram/Telegram -- %u; exec hexchat'"
+exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.config/i3/ws3.json; exec chromium-browser; exec /home/leo/apps/Telegram -- %u; exec hexchat'"
 #exec nautilus
 #exec /home/leo/Descargas/KeeWeb
 exec xautolock -time 15 -locker '~/.config/i3/screen_locker.sh' &
@@ -273,7 +273,7 @@ exec urxvt256c-ml
 # LeCoVi's shortcuts
 bindsym Ctrl+Mod1+w exec "firefox"
 bindsym Ctrl+Mod1+e exec nautilus
-bindsym Ctrl+Mod1+k exec ~/Descargas/KeeWeb
+bindsym Ctrl+Mod1+k exec ~/apps/KeeWeb
 bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+y exec "/usr/local/bin/charm_pro"
 
