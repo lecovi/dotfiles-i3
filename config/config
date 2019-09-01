@@ -274,6 +274,7 @@ exec urxvt256c-ml
 
 # LeCoVi's shortcuts
 bindsym Ctrl+Mod1+w exec "firefox"
+bindsym Ctrl+Shift+Mod1+w exec "~/apps/firefox"
 bindsym Ctrl+Mod1+e exec nautilus
 bindsym Ctrl+Mod1+k exec ~/apps/KeeWeb
 bindsym Ctrl+Mod1+g exec google-chrome-stable
