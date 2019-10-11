@@ -271,7 +271,8 @@ exec --no-startup-id "i3-msg 'workspace 3 ; append_layout ~/.config/i3/ws3.js
 #exec /home/leo/Descargas/KeeWeb
 exec xautolock -time 15 -locker "i3lock -e -i ~/Pictures/lockscreen.png" &
 exec --no-startup-id "setxkbmap -model pc104 -layout us -variant intl"
-exec urxvt256c-ml
+#exec urxvt256c-ml
+exec kitty
 
 # LeCoVi's shortcuts
 bindsym Ctrl+Mod1+w exec "firefox"
