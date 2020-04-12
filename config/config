@@ -281,6 +281,7 @@ bindsym Ctrl+Mod1+e exec nautilus
 bindsym Ctrl+Mod1+k exec ~/apps/KeeWeb
 bindsym Ctrl+Mod1+g exec google-chrome-stable
 bindsym Ctrl+Mod1+y exec "/usr/local/bin/charm_pro"
+bindsym Ctrl+Mod1+x exec "i3-nagbar -t warning -m 'You pressed the switch user shortcut. Do you really want to switch user?' -b 'Yes, switch' 'gdmflexiserver'"
 
 # Screensaver
 bindsym Ctrl+Mod1+l exec "i3lock -e -i ~/Pictures/lockscreen.png"
